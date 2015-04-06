@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="WTGZH">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/code/trunk/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/code/trunk/main/test"/>
+        <property name="context-root" value="/WTGZH"/>
+        <property name="java-output-path" value="/WTGZH/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

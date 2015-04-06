@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="gzhDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/wtgzh?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root"></property>
+		<property name="password" value="winning123"></property>
+		<property name="validationQuery"><value>SELECT 1 FROM DUAL</value> </property>
+	</bean>
+	
+	<bean id="gzhSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:org/wtgzh/property/mybatis-config.xml" />
+		<property name="dataSource" ref="gzhDataSource" />
+	</bean> 
+	
+	<!-- 					dao					-->
+	<bean id="employeeDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	 	<property name="sqlSessionFactory" ref="gzhSessionFactory" />
+		<property name="mapperInterface" value="org.wtgzh.dao.EmployeeDao" />
+	</bean>
+
+</beans>

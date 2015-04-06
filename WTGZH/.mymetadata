@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="WTGZH"
+  id="myeclipse.1427981038531"
+  context-root="/WTGZH"
+  j2ee-spec="5.0"
+  archive="WTGZH.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
